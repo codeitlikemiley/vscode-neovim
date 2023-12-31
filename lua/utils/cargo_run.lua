@@ -54,7 +54,7 @@ function cargo_run()
     end
 
     -- Use VSCodeNotify to open a terminal in VSCode and run the command
-    vscode.action('workbench.action.terminal.new')
+    vscode.action('workbench.action.terminal.focus')
 
     -- Use a delay before sending the command to ensure the terminal is ready
     vscode.action('workbench.action.terminal.sendSequence', { args = ({ text = cmd .. '\r' }) })
