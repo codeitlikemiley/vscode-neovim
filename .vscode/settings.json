@@ -1,0 +1,21 @@
+{
+    "Lua.diagnostics.globals": [
+        "vim",
+        "jit",
+        "cargo_run",
+        "is_workspace",
+        "get_package",
+        "get_makefile",
+        "is_makefile_valid",
+        "check_crate_type",
+        "is_file_in_test_context",
+        "get_bin",
+        "get_test_name",
+        "cargo_nextest",
+        "cargo_bin"
+    ],
+    "Lua.diagnostics.disable": [
+        "undefined-doc-name",
+        "undefined-field"
+    ]
+}
