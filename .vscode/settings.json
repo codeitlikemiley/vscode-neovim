@@ -17,5 +17,6 @@
     "Lua.diagnostics.disable": [
         "undefined-doc-name",
         "undefined-field"
-    ]
+    ],
+    "yaml.schemaStore.enable": false
 }
