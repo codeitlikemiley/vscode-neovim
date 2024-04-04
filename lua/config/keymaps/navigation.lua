@@ -6,4 +6,3 @@ if vim.fn.has('macunix') == 1 and vim.fn.exists('neovide') == 1 or vim.fn.has('g
   vim.keymap.set("n", "<M-up>", "<C-w>k", { silent = true })
   vim.keymap.set("n", "<M-right>", "<C-w>l", { silent = true })
 end
--- we already have  to C-h, C-j, C-k, C-l  with lazy.nvim
