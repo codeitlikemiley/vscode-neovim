@@ -15,3 +15,9 @@ vim.keymap.set(
   end,
   { silent = true, buffer = bufnr }
 )
+-- we have 2 state
+-- test and debug
+-- run and build
+
+-- we have 2 types of commands
+-- repear last command or new command
