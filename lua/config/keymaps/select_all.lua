@@ -1,3 +1,4 @@
+if vim.fn.has("macunix") == 1 and vim.fn.exists("neovide") == 1 then
 -- Normal Mode: Select All
 vim.api.nvim_set_keymap("n", "<D-a>", "ggVG", { noremap = true, silent = true })
 
@@ -12,7 +13,7 @@ vim.api.nvim_set_keymap("c", "<D-a>", "<Esc>ggVG", { noremap = true, silent = tr
 
 -- Terminal Mode: Escape to Normal Mode, then Select All
 vim.api.nvim_set_keymap("t", "<D-a>", "<C-\\><C-n>ggVG", { noremap = true, silent = true })
-
+end
 
 
 local modes = { 'n', 'o', 'x' }
