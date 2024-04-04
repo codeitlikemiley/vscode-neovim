@@ -1,5 +1,9 @@
 # VsCode + Neovim Setup For Rust <3
 
+## Latest Change
+- remove rust-tools.nvim (deprecated) use rustaceanvim instead
+- CMD Keymaps on Alacritty (MacOS) check alacritty.yml
+
 ## Installation
 
 1. Clone repo
