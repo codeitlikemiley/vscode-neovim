@@ -1,0 +1,162 @@
+window:
+  position:
+    x: 0
+    y: 0
+  decorations: none
+  opacity: 0.98
+  startup_mode: SimpleFullScreen
+scrolling:
+  history: 10000
+  multiplier: 10
+  auto_scroll: true
+
+tabspaces: 4
+
+draw_bold_text_with_bright_colors: true
+
+font:
+  normal:
+    family: "Hack Nerd Font Mono"
+
+  bold:
+    family: "Hack Nerd Font Mono"
+    style: Bold
+
+  italic:
+    family: "Hack Nerd Font Mono"
+    style: Italic
+
+  size: 18.0
+
+
+# Goldcoders Terminal Theme
+colors:
+  # Default colors
+  primary:
+    background: "#2E3440"
+    foreground: "#D8DEE9"
+
+  # Normal colors
+  normal:
+    black: "#3B4252"
+    red: "#BF616A"
+    green: "#A3BE8C"
+    yellow: "#EBCB8B"
+    blue: "#81A1C1"
+    magenta: "#B48EAD"
+    cyan: "#88C0D0"
+    white: "#E5E9F0"
+
+  # Bright colors
+  bright:
+    black: "#4C566A"
+    red: "#BF616A"
+    green: "#A3BE8C"
+    yellow: "#EBCB8B"
+    blue: "#81A1C1"
+    magenta: "#B48EAD"
+    cyan: "#8FBCBB"
+    white: "#ECEFF4"
+
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+selection:
+  semantic_escape_chars: ",?`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+dynamic_title: true
+
+live_config_reload: true
+
+# Uncomment this if we dont want tmux being activated Immediately
+#shell:
+#  program: /bin/zsh
+#  args:
+#    - --login
+
+# Yeah We want tmux Once we Start Alacritty
+#shell:
+#  program: /bin/zsh
+#  args:
+#    - -l
+#    - -c
+#    - "tmux attach || tmux"
+#
+key_bindings:
+# Alacritty Keybindings
+- { key: Return,  mods: Command, action: ToggleSimpleFullscreen } # FullScreen
+# All Commands Below are all Lazy Nvim Keybindings
+#
+# ################################################
+#
+# Find Stuff
+- { key: F1,   chars: "\x1b:RustLsp hover actions \x0d" }
+- { key: F2,chars: "\x1b cr" }
+- { key: F3,  chars: "\x1b:RustLsp openDocs \x0d" }
+#
+# Search Stuff
+- { key: O, mods: Command,  chars: "\x1b sS" }
+- { key: F, mods: Command,  chars: "\x1b sg" }
+#
+# Runnables
+- { key: R, mods: Command,  chars: "\x1b:RustLsp! runnables \x0d" }
+- { key: R, mods: Command|Shift,  chars: "\x1b:RustLsp runnables \x0d" }
+#
+# Testables
+- { key: T, mods: Command,  chars: "\x1b:RustLsp! testables \x0d" }
+- { key: T, mods: Command|Shift,  chars: "\x1b:RustLsp testables \x0d" }
+#
+# Format Leptos
+- { key: I, mods: Command|Shift,  chars: "\x1b:!leptosfmt % \x0d" }
+#
+# Macro and Proc Macros
+- { key: M, mods: Command,  chars: "\x1b:RustLsp expandMacro \x0d" }
+- { key: M, mods: Command|Shift,  chars: "\x1b:RustLsp rebuildProcMacros \x0d" }
+#
+# Git
+- { key: G, mods: Command,  chars: "\x1b gg" }
+- { key: C, mods: Command,  chars: "\x1b gc" }
+#
+# Commands and Keymaps
+- { key: Y, mods: Command,  chars: "\x1b :" }
+- { key: Space, mods: Shift,  chars: "\x1b sk" }
+#
+# Error and Diagnostic
+- { key: E, mods: Command,  chars: "\x1b:RustLsp explainError \x0d" }
+- { key: D, mods: Command|Shift, chars: "\x1b sD" }
+- { key: D, mods: Command,  chars: "\x1b:RustLsp renderDiagnostic \x0d" }
+#
+# Vim Buffer Navigation
+- { key: Key1, mods: Command, chars: ":\x1b:BufferLineGoToBuffer 1\r" }
+- { key: Key2, mods: Command, chars: ":\x1b:BufferLineGoToBuffer 2\r" }
+- { key: Key3, mods: Command, chars: ":\x1b:BufferLineGoToBuffer 3\r" }
+- { key: Key4, mods: Command, chars: ":\x1b:BufferLineGoToBuffer 4\r" }
+- { key: Key5, mods: Command, chars: ":\x1b:BufferLineGoToBuffer 5\r" }
+- { key: Key6, mods: Command, chars: ":\x1b:BufferLineGoToBuffer 6\r" }
+- { key: Key7, mods: Command, chars: ":\x1b:BufferLineGoToBuffer 7\r" }
+- { key: Key8, mods: Command, chars: ":\x1b:BufferLineGoToBuffer 8\r" }
+- { key: Key9, mods: Command, chars: ":\x1b:BufferLineGoToBuffer 9\r" }
+#
+# Debugging
+- { key: F5,chars: "\x1b:RustLsp debug \x0d" }
+- { key: X, mods: Command,  chars: "\x1b:DapToggleBreakpoint \x0d" }
+- { key: H,mods: Command, chars: "\x1b:DapStepOut \x0d" }
+- { key: J,mods: Command, chars: "\x1b:DapStepOver \x0d" }
+- { key: K,mods: Command, chars: "\x1b:DapContinue \x0d" }
+- { key: L,mods: Command, chars: "\x1b:DapStepInto \x0d" }
+- { key: S,mods: Command|Shift, chars: "\x1b:DapTerminate \x0d" }
+#
+# Sidebar
+- { key: B, mods: Command,  chars: "\x1b E" }
+# Select All
+- { key: A, mods: Command, chars: "\x1b\x1bggVG" }
+# Save
+- { key: S, mods: Command,  chars: "\x1b:w \x0d" }
+#  Code Actions
+- { key: Period, mods: Command,  chars: "\x1b:RustLsp codeAction \x0d" }
+# RustLsp openCargo
+- { key: C, mods: Command|Shift,  chars: "\x1b:RustLsp openCargo \x0d" }
+# Lazy Configuration
+- { key: X, mods: Command|Shift,  chars: "\x1b l" }
