@@ -1,0 +1,5 @@
+vim.keymap.set( "n", "bp", ":bprevious<CR>", {  desc = "Go to Previous Buffer",  silent = true })
+vim.keymap.set( "n", "bn", ":bnext<CR>", {  desc = "Go to Next Buffer",  silent = true })
+vim.keymap.set( "n", "bl", ":ls<CR>", {  desc = "List all BUffers",  silent = true })
+vim.keymap.set( "n", "bd", ":bp <BAR> bd #<CR>", {  desc = "Delete Current Buffer",  silent = true })
+vim.keymap.set( "n", "bq", ":w <bar> %bd <bar> e# <bar> bd# <CR>", {  desc = "Delete All Buffer Except Current",  silent = true })
